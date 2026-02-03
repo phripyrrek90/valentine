@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine ❤️</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      width: 320px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    h2 {
+      margin: 15px 0;
+      color: #e6005c;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 17px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background: #ff0066;
+      color: white;
+    }
+
+    #no {
+      background: #aaa;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://i.imgur.com/3ZQ3Z6L.jpg">
+    <h2>Will you be my Valentine? ❤️</h2>
+    <button id="yes" onclick="yesClicked()">Yes 💖</button>
+    <button id="no">No 😢</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      noBtn.style.display = "none";
+    });
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="text-align:center;">
+          <h1 style="color:#ff0066;">YAY!!! 😍❤️</h1>
+          <p style="font-size:20px;">You just made me the happiest person alive 🥰</p>
+          <p>Screenshot this moment 😭💖</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
